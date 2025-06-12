@@ -1,0 +1,105 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Import Beatrice font */
+@font-face {
+  font-family: 'BeatriceDeckTrial';
+  font-style: normal;
+  font-weight: 100;
+  font-display: swap;
+  src: url('/BeatriceDeckTrial-Thin.woff2') format('woff2'), /* Modern Browsers */
+       url('/BeatriceDeckTrial-Thin.woff') format('woff'); /* Older Browsers */
+}
+
+:root {
+  /* Custom properties for your color scheme */
+  --foreground-rgb: 0, 0, 0; /* black */
+  --background-rgb: 251, 243, 219; /* beige (#fbf3db) */
+  --button-bg-rgb: 232, 210, 139; /* gold (#e8d28b) */
+  --button-hover-bg-rgb: 198, 166, 100; /* Adjusted for a darker gold on hover */
+  --border-color-rgb: 240, 240, 240; /* light grey border */
+}
+
+/* Import Avenir font */
+@font-face {
+  font-family: 'Avenir';
+  font-style: normal;
+  font-weight: 100;
+  src: local('Avenir'), local('Avenir-Roman'), url('/Avenir-Black.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Avenir';
+  font-style: normal;
+  font-weight: 100;
+  src: local('Avenir Medium'), local('Avenir-Medium'), url('/Avenir-Black.woff2') format('woff2');
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255; /* white */
+    --background-rgb: 0, 0, 0; /* black */
+    --button-bg-rgb: 33, 33, 33; /* Adjust for dark mode if needed */
+    --button-hover-bg-rgb: 66, 66, 66; /* Adjust for dark mode if needed */
+    --border-color-rgb: 255, 255, 255; /* white border for dark mode */
+  }
+}
+
+body {
+  font-family: 'Beatrice', sans-serif;
+  color: rgb(var(--foreground-rgb));
+  background-color: rgb(var(--background-rgb)); /* Apply beige background */
+}
+
+body {
+  font-family: 'Avenir', sans-serif; /* Switched to Avenir */
+  color: rgb(var(--foreground-rgb));
+  background-color: rgb(var(--background-rgb)); /* Apply beige background */
+}
+
+/* TailwindCSS overrides for the learning paths UI */
+.bg-app-green {
+  background-color: #e8d28b; /* Replace with the exact hex color from your brand palette */
+}
+
+.text-app-dark {
+  color: #fbf3db; /* Replace with the exact hex color for text from your brand palette */
+}
+
+.border-app-light {
+  border-color: rgb(var(--border-color-rgb)); /* Use RGB values for consistency */
+}
+
+.button-green {
+  background-color: rgb(var(--button-bg-rgb)); /* Use RGB values for button background */
+  color: rgb(var(--foreground-rgb)); /* Black text on buttons */
+}
+
+.button-green:hover {
+  background-color: rgb(var(--button-hover-bg-rgb)); /* Darker gold on hover */
+}
+
+.path-card {
+  background-color: rgb(var(--background-rgb)); /* Use RGB values for card background */
+  border-radius: 0.5rem; /* 8px border radius */
+  padding: 1rem; /* 16px padding */
+  margin-bottom: 1rem; /* 16px margin-bottom */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* subtle shadow */
+}
+
+.path-card:hover {
+  background-color: #f8f8f8; /* Slightly different background on hover */
+}
+
+/* .font-beatriceSemibold {
+  font-family: 'Beatrice', sans-serif;
+  font-weight: 600; /* Semibold */
+
+
+.font-beatriceFont {
+  font-family: 'BeatriceDeckTrial', sans-serif;
+  font-weight: 600;
+}
+
+/* Add additional styles as needed */
